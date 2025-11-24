@@ -17,7 +17,9 @@ Including another URLconf
 import os
 from django.contrib import admin
 from django.urls import path, include
+
 from django.http import JsonResponse
+from octofit_tracker.views import ActivityList
 
 def api_root(request):
     codespace_name = os.environ.get('CODESPACE_NAME', '')
@@ -35,7 +37,7 @@ urlpatterns = [
     path('', api_root, name='api_root'),
     path('api/users/', lambda request: JsonResponse({'message': 'users endpoint'})),
     path('api/teams/', lambda request: JsonResponse({'message': 'teams endpoint'})),
-    path('api/activities/', lambda request: JsonResponse({'message': 'activities endpoint'})),
+    path('api/activities/', ActivityList.as_view()),
     path('api/leaderboard/', lambda request: JsonResponse({'message': 'leaderboard endpoint'})),
     path('api/workouts/', lambda request: JsonResponse({'message': 'workouts endpoint'})),
 ]
