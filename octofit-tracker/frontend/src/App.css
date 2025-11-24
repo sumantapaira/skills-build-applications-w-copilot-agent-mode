@@ -1,0 +1,112 @@
+
+.App {
+  text-align: center;
+  background: linear-gradient(135deg, #e0f7fa 0%, #fce4ec 100%);
+  min-height: 100vh;
+}
+
+.App-logo {
+  height: 60px;
+  margin-right: 16px;
+  vertical-align: middle;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #1976d2 0%, #ff4081 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.navbar-brand, .navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 600;
+}
+.navbar-brand img {
+  height: 40px;
+  margin-right: 10px;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link:focus, .navbar-nav .nav-link:hover {
+  color: #ffd600 !important;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #1976d2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card {
+  border-radius: 16px;
+  background: #fff8e1;
+  border: none;
+}
+.card-title {
+  color: #ff4081;
+}
+.card-text {
+  color: #333;
+}
+
+.table {
+  background: #e3f2fd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.table thead {
+  background: #1976d2;
+  color: #fff;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background: #fce4ec;
+}
+.table-hover tbody tr:hover {
+  background: #ffe0b2;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #1976d2 0%, #ff4081 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+.btn-success {
+  background: linear-gradient(90deg, #43a047 0%, #ffd600 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+.btn-warning {
+  background: linear-gradient(90deg, #ffa000 0%, #ff4081 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+.btn-danger {
+  background: linear-gradient(90deg, #d32f2f 0%, #ff4081 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+.btn-info {
+  background: linear-gradient(90deg, #0288d1 0%, #ffd600 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.App-link {
+  color: #ff4081;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.App-link:hover {
+  color: #1976d2;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
