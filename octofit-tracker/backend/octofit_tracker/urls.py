@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from django.http import JsonResponse
-from octofit_tracker.views import ActivityList
+from octofit_tracker.views import ActivityList, TeamList, UserList, WorkoutList, LeaderboardList
 
 def api_root(request):
     codespace_name = os.environ.get('CODESPACE_NAME', '')
@@ -35,9 +35,9 @@ def api_root(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', api_root, name='api_root'),
-    path('api/users/', lambda request: JsonResponse({'message': 'users endpoint'})),
-    path('api/teams/', lambda request: JsonResponse({'message': 'teams endpoint'})),
+    path('api/users/', UserList.as_view()),
+    path('api/teams/', TeamList.as_view()),
     path('api/activities/', ActivityList.as_view()),
-    path('api/leaderboard/', lambda request: JsonResponse({'message': 'leaderboard endpoint'})),
-    path('api/workouts/', lambda request: JsonResponse({'message': 'workouts endpoint'})),
+    path('api/leaderboard/', LeaderboardList.as_view()),
+    path('api/workouts/', WorkoutList.as_view()),
 ]
